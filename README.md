@@ -1,6 +1,6 @@
 # JoKenPo
-**Joguinho de Pedra, Papel e Tesoura em duas modalidades, Modo Combate e Modo Adivinhe. 
-Desenvolvido em Flutter/Dart.** <br/>
+**Joguinho de Pedra, Papel e Tesoura em duas modalidades, Modo Combate e Modo Adivinhe.** <br/> 
+**Desenvolvido em Flutter/Dart.** <br/>
 By <a href="https://www.linkedin.com/in/rauan-rosa/">Rauan Rosa</a>.
 
 ## Documentação
