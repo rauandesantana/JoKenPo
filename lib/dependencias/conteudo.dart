@@ -4,14 +4,16 @@ import 'package:jokenpo/importar_dependencias.dart';
 class Conteudo {
   // --------------------------------------------------------------------------- Conteúdo
   static List<Widget> layout(
+    BuildContext context,
     BoxConstraints constraints, {
     required ControladorPagina controladorPagina,
     required ControladorPlacar controladorPlacar,
+    required HistoricoJogadas historicoJogadas,
     required ControladorAnimacao controladorAnimacao,
   }) {
-    // ------------------------------------------------------------------------- Variável que receberá posteriormente o Layout.
+    // ------------------------------------------------------------------------- Variável Que Receberá Posteriormente o Layout.
     late List<Widget> layout;
-    // ------------------------------------------------------------------------- Verifica qual é a página para atribuir o layout.
+    // ------------------------------------------------------------------------- Verifica Qual é a Página Para Atribuir o layout.
     switch (controladorPagina.paginaAtual) {
       // ----------------------------------------------------------------------- Caso Página Combate
       case 0:
@@ -232,6 +234,7 @@ class Conteudo {
                     onTapDown: (_) => controladorAnimacao.opacidadePedra = 0.8,
                     onTapUp: (_) => controladorPlacar.jogada(
                       controladorAnimacao: controladorAnimacao,
+                      historicoJogadas: historicoJogadas,
                       escolhaJogador: 0,
                       pagina: controladorPagina.paginaAtual,
                     ),
@@ -295,6 +298,7 @@ class Conteudo {
                           controladorAnimacao.opacidadePapel = 0.8,
                       onTapUp: (_) => controladorPlacar.jogada(
                         controladorAnimacao: controladorAnimacao,
+                        historicoJogadas: historicoJogadas,
                         escolhaJogador: 1,
                         pagina: controladorPagina.paginaAtual,
                       ),
@@ -357,6 +361,7 @@ class Conteudo {
                         controladorAnimacao.opacidadeTesoura = 0.8,
                     onTapUp: (_) => controladorPlacar.jogada(
                       controladorAnimacao: controladorAnimacao,
+                      historicoJogadas: historicoJogadas,
                       escolhaJogador: 2,
                       pagina: controladorPagina.paginaAtual,
                     ),
@@ -606,6 +611,7 @@ class Conteudo {
                     onTapDown: (_) => controladorAnimacao.opacidadePedra = 0.8,
                     onTapUp: (_) => controladorPlacar.jogada(
                       controladorAnimacao: controladorAnimacao,
+                      historicoJogadas: historicoJogadas,
                       escolhaJogador: 0,
                       pagina: controladorPagina.paginaAtual,
                     ),
@@ -669,6 +675,7 @@ class Conteudo {
                           controladorAnimacao.opacidadePapel = 0.8,
                       onTapUp: (_) => controladorPlacar.jogada(
                         controladorAnimacao: controladorAnimacao,
+                        historicoJogadas: historicoJogadas,
                         escolhaJogador: 1,
                         pagina: controladorPagina.paginaAtual,
                       ),
@@ -731,6 +738,7 @@ class Conteudo {
                         controladorAnimacao.opacidadeTesoura = 0.8,
                     onTapUp: (_) => controladorPlacar.jogada(
                       controladorAnimacao: controladorAnimacao,
+                      historicoJogadas: historicoJogadas,
                       escolhaJogador: 2,
                       pagina: controladorPagina.paginaAtual,
                     ),
@@ -764,8 +772,44 @@ class Conteudo {
       // ----------------------------------------------------------------------- Caso Página Histórico
       case 2:
         layout = <Widget>[
-          const Text(
-            "Caso Página Histórico",
+          // ------------------------------------------------------------------- Titulo Histórico
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 5),
+            child: Text(
+              "Histórico de Jogadas",
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                color: AjusteCor.conteudo.tituloErro,
+                fontSize: AjusteLayout.ajusteTexto(
+                  constraints,
+                  ajuste: 30,
+                  ajusteMin: 15,
+                  ajusteMax: 25,
+                ),
+              ),
+            ),
+          ),
+          // ------------------------------------------------------------------- Histórico de Jogadas
+          Container(
+            width: AjusteLayout.ajusteLargura(
+              constraints,
+              ajuste: 80,
+              ajusteMax: 650,
+            ),
+            height: AjusteLayout.ajusteAltura(constraints, ajuste: 85),
+            decoration: BoxDecoration(
+              border: Border.all(
+                width: 2,
+                color: AjusteCor.conteudo.bordaMoldura,
+              ),
+              borderRadius: BorderRadius.circular(10),
+            ),
+            // ----------------------------------------------------------------- Lista Histórico
+            child: ListHistorico.executar(
+              context,
+              constraints,
+              historicoJogadas,
+            ),
           ),
         ];
         break;

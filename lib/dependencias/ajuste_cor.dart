@@ -36,6 +36,7 @@ class $Conteudo {
   const $Conteudo();
   Color get fundoConteudo => _Cor.fundo;
   Color get tituloErro => _Cor.principal;
+  Color get tituloHistorico => _Cor.principal;
   Color get tituloVitoria => _Cor.jogador;
   Color get tituloDerrota => _Cor.maquina;
   Color get tituloEmpate => _Cor.neutra;

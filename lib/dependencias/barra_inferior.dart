@@ -20,6 +20,7 @@ class BarraInferior {
     BoxConstraints constraints, {
     required ControladorPagina controladorPagina,
     required ControladorPlacar controladorPlacar,
+    required HistoricoJogadas historicoJogadas,
     required ControladorAnimacao controladorAnimacao,
   }) {
     // ------------------------------------------------------------------------- Retorna o Layout
@@ -175,6 +176,7 @@ class BarraInferior {
                 onPressed: () => DialogResetar.executar(
                   context,
                   controladorPlacar,
+                  historicoJogadas,
                   controladorAnimacao,
                 ),
                 // ------------------------------------------------------------- Titulo Botão Resetar

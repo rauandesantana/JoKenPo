@@ -22,16 +22,19 @@ abstract class ControladorPlacarBase with Store {
   @action
   jogada({
     required ControladorAnimacao controladorAnimacao,
+    required HistoricoJogadas historicoJogadas,
     required int escolhaJogador,
     required int pagina,
   }) {
     // ------------------------------------------------------------------------- Escolha da Máquina
-    int escolhaMaquina = JogadaMaquina.escolha();
+    int escolhaMaquina = JogadaMaquina.escolha(
+      historicoJogadas: historicoJogadas,
+    );
     // ------------------------------------------------------------------------- Verifica qual o Modo Atual
     switch (pagina) {
-    // ----------------------------------------------------------------------- Caso Esteja no Modo Combate
+      // ----------------------------------------------------------------------- Caso Esteja no Modo Combate
       case 0:
-      // --------------------------------------------------------------------- Executar Animação da Escolha
+        // --------------------------------------------------------------------- Executar Animação da Escolha
         controladorAnimacao.animacaoEscolha(escolhaJogador: escolhaJogador);
         // --------------------------------------------------------------------- Receberá o Resultado da Partida
         late int resultado;
@@ -61,15 +64,16 @@ abstract class ControladorPlacarBase with Store {
           escolhaMaquina: escolhaMaquina,
         );
         // --------------------------------------------------------------------- Salva no Histórico os Detalhes da Partida
-        HistoricoJogadas.salvarPartida(
+        historicoJogadas.salvarPartida(
+          pagina: pagina,
           resultado: resultado,
           escolhaJogador: escolhaJogador,
           escolhaMaquina: escolhaMaquina,
         );
         break;
-    // ----------------------------------------------------------------------- Caso Esteja no Modo Adivinhe
+      // ----------------------------------------------------------------------- Caso Esteja no Modo Adivinhe
       case 1:
-      // --------------------------------------------------------------------- Executar Animação da Escolha
+        // --------------------------------------------------------------------- Executar Animação da Escolha
         controladorAnimacao.animacaoEscolha(escolhaJogador: escolhaJogador);
         // --------------------------------------------------------------------- Receberá o Resultado da Partida
         late int resultado;
@@ -90,7 +94,8 @@ abstract class ControladorPlacarBase with Store {
           escolhaMaquina: escolhaMaquina,
         );
         // --------------------------------------------------------------------- Salva no Histórico os Detalhes da Partida
-        HistoricoJogadas.salvarPartida(
+        historicoJogadas.salvarPartida(
+          pagina: pagina,
           resultado: resultado,
           escolhaJogador: escolhaJogador,
           escolhaMaquina: escolhaMaquina,
@@ -101,10 +106,13 @@ abstract class ControladorPlacarBase with Store {
 
   // --------------------------------------------------------------------------- Função Resetar as Partidas
   @action
-  resetarPartidas({required ControladorAnimacao controladorAnimacao}) {
+  resetarPartidas({
+    required ControladorAnimacao controladorAnimacao,
+    required HistoricoJogadas historicoJogadas,
+  }) {
     pontosJogador = 0;
     pontosMaquina = 0;
     controladorAnimacao.animacaoLimpar();
-    HistoricoJogadas.limparHistorico();
+    historicoJogadas.limparHistorico();
   }
 }

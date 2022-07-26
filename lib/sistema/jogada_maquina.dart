@@ -4,9 +4,11 @@ import 'package:jokenpo/importar_dependencias.dart';
 
 class JogadaMaquina {
   // --------------------------------------------------------------------------- Função Escolha da Máquina
-  static int escolha() {
+  static int escolha({
+    required HistoricoJogadas historicoJogadas,
+  }) {
     // ------------------------------------------------------------------------- Ultima jogada Realizada Pela Maquina
-    int nAntPartida = HistoricoJogadas.nPartidas - 1;
+    int nAntPartida = historicoJogadas.nPartidas - 1;
     late int jogadaAntJogador;
     late int jogadaAntMaquina;
     // ------------------------------------------------------------------------- Se o Indice é Menor Que 0
@@ -17,9 +19,9 @@ class JogadaMaquina {
     // ------------------------------------------------------------------------- Se o Indice Não é Menor Que 0
     else {
       // ----------------------------------------------------------------------- Ultima jogada Realizada Pelo Jogador
-      jogadaAntJogador = HistoricoJogadas.jogadaAntJogador[nAntPartida];
+      jogadaAntJogador = historicoJogadas.jogadaAntJogador[nAntPartida];
       // ----------------------------------------------------------------------- Ultima jogada Realizada Pela Maquina
-      jogadaAntMaquina = HistoricoJogadas.jogadaAntMaquina[nAntPartida];
+      jogadaAntMaquina = historicoJogadas.jogadaAntMaquina[nAntPartida];
     }
     // ------------------------------------------------------------------------- Receberá a Escolha da Máquina
     late int escolhaMaquina;

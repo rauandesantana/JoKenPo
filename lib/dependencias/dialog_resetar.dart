@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:jokenpo/importar_dependencias.dart';
 
 class DialogResetar {
-  // --------------------------------------------------------------------------- Dialog Resetar controladorPlacar.resetarPartida()
+  // --------------------------------------------------------------------------- Dialog Resetar
   static Future executar(
     BuildContext context,
     ControladorPlacar controladorPlacar,
+    HistoricoJogadas historicoJogadas,
     ControladorAnimacao controladorAnimacao,
   ) {
     return showDialog(
@@ -54,6 +55,7 @@ class DialogResetar {
             onPressed: () {
               controladorPlacar.resetarPartidas(
                 controladorAnimacao: controladorAnimacao,
+                historicoJogadas: historicoJogadas,
               );
               Navigator.of(context).pop();
             },

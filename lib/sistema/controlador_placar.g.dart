@@ -47,6 +47,7 @@ mixin _$ControladorPlacar on ControladorPlacarBase, Store {
   @override
   dynamic jogada(
       {required ControladorAnimacao controladorAnimacao,
+      required HistoricoJogadas historicoJogadas,
       required int escolhaJogador,
       required int pagina}) {
     final _$actionInfo = _$ControladorPlacarBaseActionController.startAction(
@@ -54,6 +55,7 @@ mixin _$ControladorPlacar on ControladorPlacarBase, Store {
     try {
       return super.jogada(
           controladorAnimacao: controladorAnimacao,
+          historicoJogadas: historicoJogadas,
           escolhaJogador: escolhaJogador,
           pagina: pagina);
     } finally {
@@ -62,11 +64,15 @@ mixin _$ControladorPlacar on ControladorPlacarBase, Store {
   }
 
   @override
-  dynamic resetarPartidas({required ControladorAnimacao controladorAnimacao}) {
+  dynamic resetarPartidas(
+      {required ControladorAnimacao controladorAnimacao,
+      required HistoricoJogadas historicoJogadas}) {
     final _$actionInfo = _$ControladorPlacarBaseActionController.startAction(
         name: 'ControladorPlacarBase.resetarPartidas');
     try {
-      return super.resetarPartidas(controladorAnimacao: controladorAnimacao);
+      return super.resetarPartidas(
+          controladorAnimacao: controladorAnimacao,
+          historicoJogadas: historicoJogadas);
     } finally {
       _$ControladorPlacarBaseActionController.endAction(_$actionInfo);
     }

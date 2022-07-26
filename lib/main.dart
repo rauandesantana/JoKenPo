@@ -19,11 +19,13 @@ class Main extends StatefulWidget {
 }
 
 class _MainState extends State<Main> {
-  // --------------------------------------------------------------------------- Instanciar Controlador Página
+  // --------------------------------------------------------------------------- Instanciar Controlador de Página
   ControladorPagina controladorPagina = ControladorPagina();
-  // --------------------------------------------------------------------------- Instanciar Controlador Placar
+  // --------------------------------------------------------------------------- Instanciar Controlador de Placar
   ControladorPlacar controladorPlacar = ControladorPlacar();
-  // --------------------------------------------------------------------------- Instanciar Controlador Animação
+  // --------------------------------------------------------------------------- Instanciar Historico de Jogadas
+  HistoricoJogadas historicoJogadas = HistoricoJogadas();
+  // --------------------------------------------------------------------------- Instanciar Controlador de Animação
   ControladorAnimacao controladorAnimacao = ControladorAnimacao();
   @override
   Widget build(BuildContext context) {
@@ -64,9 +66,11 @@ class _MainState extends State<Main> {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: Conteudo.layout(
+                        context,
                         constraints,
                         controladorPagina: controladorPagina,
                         controladorPlacar: controladorPlacar,
+                        historicoJogadas: historicoJogadas,
                         controladorAnimacao: controladorAnimacao,
                       ),
                     ),
@@ -91,6 +95,7 @@ class _MainState extends State<Main> {
                     constraints,
                     controladorPagina: controladorPagina,
                     controladorPlacar: controladorPlacar,
+                    historicoJogadas: historicoJogadas,
                     controladorAnimacao: controladorAnimacao,
                   ),
                 );
