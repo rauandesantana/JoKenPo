@@ -267,7 +267,7 @@
     },
     {
       "name": "mobx",
-      "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/mobx-2.0.7+4",
+      "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/mobx-2.0.7+5",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
@@ -416,7 +416,7 @@
       "languageVersion": "2.17"
     }
   ],
-  "generated": "2022-07-26T22:43:12.697838Z",
+  "generated": "2022-07-28T08:34:09.656361Z",
   "generator": "pub",
   "generatorVersion": "2.17.6"
 }

@@ -63,7 +63,10 @@ class BarraInferior {
                 ),
                 // ------------------------------------------------------------- Função Botão Modo Combate
                 onPressed: controladorPagina.paginaAtual != 0
-                    ? () => controladorPagina.acessarPagina(pagina: 0)
+                    ? () => controladorPagina.acessarPagina(
+                          pagina: 0,
+                          controladorAnimacao: controladorAnimacao,
+                        )
                     : null,
                 // ------------------------------------------------------------- Titulo Botão Modo Combate
                 child: Text(
@@ -100,7 +103,10 @@ class BarraInferior {
                 ),
                 // ------------------------------------------------------------- Função Botão Modo Adivinhe
                 onPressed: controladorPagina.paginaAtual != 1
-                    ? () => controladorPagina.acessarPagina(pagina: 1)
+                    ? () => controladorPagina.acessarPagina(
+                          pagina: 1,
+                          controladorAnimacao: controladorAnimacao,
+                        )
                     : null,
                 // ------------------------------------------------------------- Titulo Botão Modo Adivinhe
                 child: Text(
@@ -137,7 +143,10 @@ class BarraInferior {
                 ),
                 // ------------------------------------------------------------- Função Botão Histórico
                 onPressed: controladorPagina.paginaAtual != 2
-                    ? () => controladorPagina.acessarPagina(pagina: 2)
+                    ? () => controladorPagina.acessarPagina(
+                          pagina: 2,
+                          controladorAnimacao: controladorAnimacao,
+                        )
                     : null,
                 // ------------------------------------------------------------- Titulo Botão Histórico
                 child: Text(

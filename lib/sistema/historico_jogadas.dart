@@ -34,7 +34,7 @@ abstract class HistoricoJogadasBase with Store {
     required int escolhaMaquina,
   }) {
     modoPartida.add(pagina);
-    resultadoPartida.add(pagina);
+    resultadoPartida.add(resultado);
     jogadaAntJogador.add(escolhaJogador);
     jogadaAntMaquina.add(escolhaMaquina);
     nPartidas++;

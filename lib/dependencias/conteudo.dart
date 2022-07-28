@@ -113,7 +113,7 @@ class Conteudo {
                     "Vs",
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
-                      color: AjusteCor.conteudo.tituloErro,
+                      color: AjusteCor.conteudo.erro,
                       fontSize: AjusteLayout.ajusteTexto(
                         constraints,
                         ajuste: 90,
@@ -183,7 +183,7 @@ class Conteudo {
               "Escolha",
               style: TextStyle(
                 fontWeight: FontWeight.bold,
-                color: AjusteCor.conteudo.tituloErro,
+                color: AjusteCor.conteudo.erro,
                 fontSize: AjusteLayout.ajusteTexto(
                   constraints,
                   ajuste: 30,
@@ -490,7 +490,7 @@ class Conteudo {
                     "<>",
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
-                      color: AjusteCor.conteudo.tituloErro,
+                      color: AjusteCor.conteudo.erro,
                       fontSize: AjusteLayout.ajusteTexto(
                         constraints,
                         ajuste: 90,
@@ -560,7 +560,7 @@ class Conteudo {
               "Escolha",
               style: TextStyle(
                 fontWeight: FontWeight.bold,
-                color: AjusteCor.conteudo.tituloErro,
+                color: AjusteCor.conteudo.erro,
                 fontSize: AjusteLayout.ajusteTexto(
                   constraints,
                   ajuste: 30,
@@ -779,7 +779,7 @@ class Conteudo {
               "Histórico de Jogadas",
               style: TextStyle(
                 fontWeight: FontWeight.bold,
-                color: AjusteCor.conteudo.tituloErro,
+                color: AjusteCor.conteudo.erro,
                 fontSize: AjusteLayout.ajusteTexto(
                   constraints,
                   ajuste: 30,
@@ -835,7 +835,7 @@ class Conteudo {
             "Ops... Página Não Encontrada!",
             style: TextStyle(
               fontWeight: FontWeight.bold,
-              color: AjusteCor.conteudo.tituloErro,
+              color: AjusteCor.conteudo.erro,
               fontSize: AjusteLayout.ajusteTexto(
                 constraints,
                 ajuste: 30,

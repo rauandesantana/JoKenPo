@@ -29,11 +29,13 @@ mixin _$ControladorPagina on ControladorPaginaBase, Store {
       ActionController(name: 'ControladorPaginaBase', context: context);
 
   @override
-  dynamic acessarPagina({required int pagina}) {
+  dynamic acessarPagina(
+      {required int pagina, required dynamic controladorAnimacao}) {
     final _$actionInfo = _$ControladorPaginaBaseActionController.startAction(
         name: 'ControladorPaginaBase.acessarPagina');
     try {
-      return super.acessarPagina(pagina: pagina);
+      return super.acessarPagina(
+          pagina: pagina, controladorAnimacao: controladorAnimacao);
     } finally {
       _$ControladorPaginaBaseActionController.endAction(_$actionInfo);
     }

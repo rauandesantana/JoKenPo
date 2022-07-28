@@ -32,7 +32,7 @@ class DialogResetar {
                 "Deseja mesmo resetar toda a partida?",
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
-                  color: AjusteCor.conteudo.tituloErro,
+                  color: AjusteCor.conteudo.erro,
                 ),
               ),
             ],

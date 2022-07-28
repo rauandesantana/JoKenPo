@@ -16,7 +16,8 @@ abstract class ControladorPaginaBase with Store {
 
   // --------------------------------------------------------------------------- Função Acessar a Página
   @action
-  acessarPagina({required int pagina}) {
+  acessarPagina({required int pagina, required controladorAnimacao}) {
     paginaAtual = pagina;
+    controladorAnimacao.animacaoLimpar();
   }
 }

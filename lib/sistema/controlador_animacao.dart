@@ -77,7 +77,7 @@ abstract class ControladorAnimacaoBase with Store {
   String tituloResultado = "";
   // --------------------------------------------------------------------------- Ajuste da Imagem Máquina
   @observable
-  Color corResultado = AjusteCor.conteudo.tituloEmpate;
+  Color corResultado = AjusteCor.conteudo.resultadoEmpate;
 
   // --------------------------------------------------------------------------- Função da Animação do Resultado
   @action
@@ -121,21 +121,21 @@ abstract class ControladorAnimacaoBase with Store {
       // ----------------------------------------------------------------------- Caso Seja Empate
       case 0:
         tituloResultado = "Empate";
-        corResultado = AjusteCor.conteudo.tituloEmpate;
+        corResultado = AjusteCor.conteudo.resultadoEmpate;
         ajusteImagemJogador = 1.0;
         ajusteImagemMaquina = 1.0;
         break;
       // ----------------------------------------------------------------------- Caso Seja Vitória
       case 1:
         tituloResultado = "Vitória";
-        corResultado = AjusteCor.conteudo.tituloVitoria;
+        corResultado = AjusteCor.conteudo.resultadoVitoria;
         ajusteImagemJogador = 1.0;
         ajusteImagemMaquina = 0.5;
         break;
       // ----------------------------------------------------------------------- Caso Seja Derrota
       case 2:
         tituloResultado = "Derrota";
-        corResultado = AjusteCor.conteudo.tituloDerrota;
+        corResultado = AjusteCor.conteudo.resultadoDerrota;
         ajusteImagemJogador = 0.5;
         ajusteImagemMaquina = 1.0;
         break;
@@ -150,6 +150,6 @@ abstract class ControladorAnimacaoBase with Store {
     ajusteImagemJogador = 1.0;
     ajusteImagemMaquina = 1.0;
     tituloResultado = "";
-    corResultado = AjusteCor.conteudo.tituloEmpate;
+    corResultado = AjusteCor.conteudo.resultadoEmpate;
   }
 }

@@ -35,11 +35,11 @@ class $BarraSuperior {
 class $Conteudo {
   const $Conteudo();
   Color get fundoConteudo => _Cor.fundo;
-  Color get tituloErro => _Cor.principal;
   Color get tituloHistorico => _Cor.principal;
-  Color get tituloVitoria => _Cor.jogador;
-  Color get tituloDerrota => _Cor.maquina;
-  Color get tituloEmpate => _Cor.neutra;
+  Color get resultadoVitoria => _Cor.jogador;
+  Color get resultadoDerrota => _Cor.maquina;
+  Color get resultadoEmpate => _Cor.neutra;
+  Color get erro => _Cor.principal;
   Color get botaoNao => _Cor.neutra;
   Color get botaoSim => _Cor.principal;
   Color get bordaMoldura => _Cor.principal;
