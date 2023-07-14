@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:jokenpo/importar_dependencias.dart';
+import 'package:jokenpo/sistema/controlador_animacao.dart';
+import 'package:jokenpo/sistema/controlador_placar.dart';
+import 'package:jokenpo/sistema/historico_jogadas.dart';
 
 class DialogResetar {
   // --------------------------------------------------------------------------- Dialog Resetar

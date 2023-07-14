@@ -1,4 +1,6 @@
-import 'package:jokenpo/importar_dependencias.dart';
+import 'package:jokenpo/sistema/controlador_animacao.dart';
+import 'package:jokenpo/sistema/historico_jogadas.dart';
+import 'package:jokenpo/sistema/jogada_maquina.dart';
 import 'package:mobx/mobx.dart';
 part 'controlador_placar.g.dart';
 

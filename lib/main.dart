@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:jokenpo/importar_dependencias.dart';
+import 'package:jokenpo/sistema/controlador_animacao.dart';
+import 'package:jokenpo/sistema/controlador_pagina.dart';
+import 'package:jokenpo/sistema/controlador_placar.dart';
+import 'package:jokenpo/sistema/historico_jogadas.dart';
 
 void main() {
   runApp(

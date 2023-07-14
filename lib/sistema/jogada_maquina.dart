@@ -1,6 +1,5 @@
 import 'dart:math';
-
-import 'package:jokenpo/importar_dependencias.dart';
+import 'package:jokenpo/sistema/historico_jogadas.dart';
 
 class JogadaMaquina {
   // --------------------------------------------------------------------------- Função Escolha da Máquina

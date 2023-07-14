@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:jokenpo/importar_dependencias.dart';
+import 'package:jokenpo/sistema/historico_jogadas.dart';
 
 class ListHistorico {
   // --------------------------------------------------------------------------- Listagem do Histórico
